@@ -1,0 +1,88 @@
+.footer {
+	background-color: $primary-gray-light;
+	padding: $common-gutters 0;
+	.foo-brand {
+		margin-bottom: 1rem;
+		img {
+			max-width: 80px;
+			height: auto;
+		}
+	}
+}
+
+.foo-title {
+	font-size: $fs-small;
+}
+
+.footer-top {
+	padding: 3rem 0;
+}
+
+.foo-nav {
+	@include list-unstyled;
+
+	a {
+		display: inline-block;
+		padding: .25rem 0;
+	}
+}
+
+.foo-nav-inline {
+	display: flex;
+	flex-wrap: wrap;
+	@include list-unstyled;
+	margin: 0 -8px;
+	font-size: .750rem; 
+
+	li {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	a {
+		text-transform: uppercase;
+		letter-spacing: .063rem;
+		font-weight: 500;
+		color: $color-text;
+	}
+}
+
+.copyright {
+	margin-top: 5px;
+	display: inline-block;
+	font-size: .750rem;
+	font-style: italic;
+	opacity: .85;
+}
+
+.foo-socials {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	@include list-unstyled;
+	margin: 0 -15px 1rem;
+	text-transform: uppercase;
+	li {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	a {
+		font-size: 1.25rem;
+		display: inline-block;
+		text-align: center;
+		transition: .25s ease;
+		color: $color-text;
+		opacity: .75;
+		&:hover {
+			
+		}
+	}
+	span {
+		display: block;
+		font-size: .75rem;
+	}
+}
+
+.footer-bottom {
+	background-color: $white;
+	padding: 1rem 0;
+}

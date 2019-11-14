@@ -1,0 +1,38 @@
+
+.section {
+	padding-top: $section-gutters;
+	padding-bottom: $section-gutters;
+}
+.block-pt, .block-py {
+	padding-top: $section-gutters;
+}
+.block-pb, .block-py {
+	padding-bottom: $section-gutters;
+}
+.has-col-mb {
+	padding-bottom: $section-gutters - $common-gutters_2x;
+}
+.section-heading {
+	font-size: 2.5rem;
+	font-family: $ff-playfair;
+	margin-bottom: $section-gutters / 2;
+}
+.section-h_text {
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+.section-heading_group {
+	margin-bottom: $section-gutters / 2;
+	.section-heading {
+		margin-bottom: 1rem;
+	}
+}
+
+.container-fluid-px-lg {
+	padding-left: 60px;
+	padding-right: 60px;
+}
+

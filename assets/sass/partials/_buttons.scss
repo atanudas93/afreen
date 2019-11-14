@@ -1,0 +1,116 @@
+
+/* BUTTON */
+
+.btn {
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: #eee;
+    text-decoration: none;
+  }
+
+  &.btn-square {
+    @include border-radius(0);
+  }
+  &.btn-round {
+    @include border-radius(10em);
+  }
+
+}
+
+[class*="btn-custom-"] {
+  text-transform: uppercase;
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .063rem;
+  &:hover, &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-primary {
+	@include base-button-variant(#fff, $primary, $primary);
+}
+.btn-success {
+	@include base-button-variant(#fff, $color-success, $color-success);
+}
+.btn-info {
+	@include base-button-variant(#fff, $color-info, $color-info);
+}
+.btn-warning {
+	@include base-button-variant(#fff, $color-warning, $color-warning);
+}
+.btn-danger {
+	@include base-button-variant(#fff, $color-danger, $color-danger);
+}
+.btn-custom-default {
+  @include base-button-variant(#333, #fff, #fff);
+}
+.btn-custom-outline-light {
+  @include base-button-outline-variant($color-text, $white, $border-color);
+  &:hover {
+    color: darken($color-text, 5%);
+  }
+}
+
+
+
+.btn-custom-primary {
+    @include base-button-variant($white, $primary, $primary);
+}
+
+
+
+.btn-custom-outline-primary {
+    @include base-button-outline-variant($primary, $primary, $primary);
+}
+.btn-custom-outline-secondary {
+  background-color: transparent;
+  border-color: $secondary;
+  color: $secondary;
+}
+
+.btn-facebook {
+  @include base-button-variant(#fff, $brand-facebook, $brand-facebook);
+}
+.btn-twitter {
+  @include base-button-variant(#fff, $brand-twitter, $brand-twitter);
+}
+.btn-linkedin {
+  @include base-button-variant(#fff, $brand-linkedin, $brand-linkedin);
+}
+
+
+
+// Linked Button
+.a-linked {
+  display: inline-flex;
+  align-items: center;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .063rem;
+  background-color: $primary;
+  color: $color-heading;
+  padding: .25rem 1rem;
+  .a-linked-icon {
+    line-height: 1;
+    display: inline-block;
+    margin-left: .25rem;
+    opacity: .35;
+    transition: all .25s linear;
+  }
+  &:hover {
+    .a-linked-icon {
+      opacity: 1
+    }
+  }
+}
+

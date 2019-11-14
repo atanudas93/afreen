@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+	.card-blog_default-large {
+    	.blog_default-image {
+			&:before {
+				padding-top: 100%;
+			}
+    	}
+    }
+}
+@media (min-width: 992px) {
+	.navbar-for_mobile {
+		display: none;
+	}
+}
+@media (min-width: 1200px) {
+	.card-blog_default-large {
+    	.blog_default-image {
+			&:before {
+				padding-top: 66.66%;
+			}
+    	}
+    }
+}
+@media (min-width: 1400px) {
+	.card-blog_default-large {
+    	.blog_default-image {
+			&:before {
+				padding-top: 56.25%;
+			}
+    	}
+    }
+}
+
+@media (max-width: 991px) {
+	.navbar-for_desktop {
+		display: none;
+	}
+}

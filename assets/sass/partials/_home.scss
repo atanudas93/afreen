@@ -1,0 +1,496 @@
+.heading_group-exclusive {
+    .section-heading {
+        font-size: 3.5rem;
+        font-weight: 300;
+        span, strong {
+            color: $primary;
+        }
+    }
+    .section-h_text {
+        font-size: 1.375rem;
+        font-weight: 300;
+    }
+}
+.card-service_highlighted {
+    border: 1px solid $primary-gray;
+    padding: 2.5rem 2rem;
+}
+.service_highlighted-icon {
+    width: 100%;
+    max-width: 70px;
+    position: relative;
+    margin: 0 auto 1.75rem;
+    &:before {
+        content: " ";
+        display: block;
+        padding-top: 100%;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        object-fit: contain;
+    }
+}
+.service_highlighted-title {
+    margin-bottom: .75rem;
+}
+.service_highlighted-text {
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.section-flexable {
+    position: relative;   
+}
+.flexable-bgs {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    > div {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .flexable-bg-color {
+        background-color: $primary-gray-light;
+    }
+    .--left {
+        left: 0;
+    }
+    .--right {
+        right: 0;
+    }
+}
+.flexable-bg-image {
+    width: 100%;
+    max-width: 50%;
+    .flexable-bg_image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+.flexable_content-block {
+    padding: $section-gutters;
+    min-height: 600px
+}
+.section-h_text {
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+
+.flexable_content-right {
+    .flexable_content-block {
+        padding-right: 0;
+    }
+}
+.flexable_content-left {
+    .flexable_content-block {
+        padding-left: 0;
+    }
+}
+
+
+
+.card-glance {
+    background-color: $primary-gray-light;
+    border: 1px solid $primary-gray-light;
+    padding: 40px 30px;
+    transition: all .25s ease;
+    .glance-icon {
+        border: 1px solid $primary;
+        max-width: 75px;
+        margin-bottom: 1.75rem;
+        padding: .75rem;
+        border-radius: .25rem;
+    }
+    .glance-icon-block {
+        position: relative;
+        width: 100%;
+        &:before {
+            content: " ";
+            display: block;
+            padding-top: 100%;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            object-fit: contain;
+        }
+    }
+    .glance-title {
+        margin-bottom: 1rem;
+    }
+    .glance-text {
+        p {
+            margin-bottom: 0;
+        }
+    }
+    &:hover {
+        background-color: $white;
+        border-color: $primary;
+    }
+}
+
+
+.card-expertise {
+    position: relative;
+    .expertise-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        &:before {
+            content: " ";
+            display: block;
+            padding-top: 50%;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            object-fit: cover;
+            transition: all .25s ease;
+        }
+    }
+    .expertise-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding: $common-gutters_2x;
+        background-color: rgba($color: $black, $alpha: .35);
+        transition: all .25s ease;
+    }
+    .expertise-title {
+        color: $white;
+        margin-bottom: 0;
+        transition: all .25s ease;
+    }
+    &:hover {
+        img {
+            transform: scale(1.05);
+        }
+        .expertise-content {
+            background-color: rgba($color: $black, $alpha: .55);
+        }
+    }
+    &.--viewmore {
+        .expertise-content {
+            background-color: $white;
+        }
+        .expertise-title {
+            color: $primary;
+        }
+        &:hover {
+            .expertise-content {
+                background-color: $primary;
+            }
+            .expertise-title {
+                color: $white;
+            }
+        }
+    }
+}
+
+.card-partner {
+    border: 1px solid $primary-gray;
+    padding: $common-gutters;
+}
+
+
+
+.btn-loadmore {
+    font-family: $ff-accent;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: $color-text;
+    display: inline-block;
+    position: relative;
+    padding: .25rem 1.5rem;
+    border: 1px solid $primary;
+    /* &:before {
+        content: " ";
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        background-color: $bg-gray-primary;
+        width: 100%;
+        height: 1px;
+        transform: translateX(-50%);
+    } */
+
+}
+
+.card-aboutme {
+    background-color: lighten($bg-gray-primary, 3.5%);
+    padding: 1.25rem 1.25rem 0;
+    position: relative;
+    .s-category-title {
+        margin-bottom: .75rem;
+    }
+    .about-note {
+        margin-bottom: 2rem;
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .about-subscribe-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .btn-about-subscribe {
+        text-transform: uppercase;
+        font-size: .875rem;
+        letter-spacing: .063rem;
+        background-color: $white;
+        border-radius: 0;
+    }
+}
+.about-avater {
+    width: 100%;
+    max-width: 150px;
+    position: relative;
+    margin: 0 auto 1rem;    
+    &:before {
+        content: " ";
+        display: block;
+        padding-top: 100%;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.post-featured-about {
+    [class*="card-"] {
+        min-height: 100%;
+    }
+}
+
+.card-subscribe {
+    padding: 4px;
+    background-image: repeating-linear-gradient(135deg, #ff6969, #ff6969 10px, #FFF 0px, #FFF 20px, #85adff 0px, #85adff 30px, #FFF 0px, #FFF 40px);
+    .card-subscribe-block {
+        padding: 1.25rem;
+        background-color: $white;
+    }
+}
+
+.modal-subscribe {
+    .close {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        z-index: 10;
+    }
+    .subscribe-image {
+        position: relative;
+        &:before {
+            content: " ";
+            display: block;
+            padding-top: 150%;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+        }
+    }
+    .subscribe-content {
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 100%;
+    }
+    .brand-logo-text {
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .form-control {
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-radius: 0;
+        font-size: .875rem;
+        border-color: $color-heading;
+        @include placeholder {
+            color: $bg-gray-primary;
+        }
+        &:focus {
+            box-shadow: none;
+            border-color: $primary-deep;
+        }
+    }
+    .btn-subscribe {
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom-color: $color-heading;
+        border-radius: 0;
+    }
+}
+
+.search_modal-open {
+    .modal-backdrop {
+        background-color: $bg-gray-primary; 
+        &.show {
+            opacity: .85;
+        }
+    }
+}
+.modal-search {
+    .modal-content {
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .close {
+        font-size: 2.25rem;
+        font-weight: 200;
+        position: absolute;
+        left: 1.5rem;
+        top: .5rem;
+        z-index: 10;
+        background-color: $bg-gray-primary;
+        padding: 0;
+        text-shadow: none;
+        opacity: 1;
+        width: 40px;
+        height: 40px;
+        line-height: 1;
+        color: #666;
+        &:hover {
+            opacity: 1;
+            color: $color-text;
+        }
+        &:focus {
+            box-shadow: none;
+            outline: 0;
+        }
+    }
+    .form-control {
+        font-family: $ff-accent;
+        font-size: 1.5rem;
+        font-style: italic;
+        height: 64px;
+        padding: .5rem 1.5rem;
+        border: 2px solid lighten($black, 35%);
+        border-radius: 0;
+        box-shadow: none;
+        &:focus {
+            border-color: $primary-deep;
+        }
+    }
+}
+
+
+.text-widget {
+    text-align: center;
+    .single-heading {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    figure {
+        margin-bottom: 1.5rem;
+    }
+    p, h1, h2, h3 {
+        width: 100%;
+        max-width: 85%;
+        margin: 0 auto 1.5rem;
+    }
+    h1 {
+        margin-bottom: .5rem;
+    }
+    p {
+        &:not(.post-date) {
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+    }
+}
+
+.single-post-metas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: .875rem;
+    border-top: 2px solid $bg-gray-primary;
+    padding-top: .25rem;
+    margin-top: 2rem;
+}
+.single-post-comments {
+    a {
+        color: $color-text;
+    }
+}
+.shareable-lists {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-left: -8px;
+    margin-right: -8px;
+    display: flex;
+    align-items: center;
+    li {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    a {
+        color: $color-heading;
+    }
+}

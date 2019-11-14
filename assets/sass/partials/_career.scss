@@ -1,0 +1,71 @@
+.table-notice {
+    margin-bottom: 0;
+    th {
+        font-size: $fs-small;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: .063rem;
+    }
+    th, td {
+        padding: 1rem;
+    }
+    thead {
+        th {
+            background-color: $primary-gray-light;
+            border-top: 0;
+            border-bottom: 0;
+        }
+    }
+    tbody {
+        td {
+            vertical-align: middle;
+            border-top-color: $primary-gray;
+        }
+    }
+}
+.section-career-office_image {
+    position: relative;
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &:before {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-image: linear-gradient(90deg, $black, $primary-gray); 
+        opacity: .75;
+    }
+}
+
+.card-career_perk {
+    text-align: center;
+    .career_park-image {
+        margin-bottom: 1rem;
+    }
+    img {
+        max-width: 70px;
+    }
+    .career_park-text {
+        font-size: 1.125rem;
+        font-weight: 300;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.card-career_position {
+    background-color: $white;
+    padding: $common-gutters_2x;
+    .career_position-action {
+        margin-top: 1rem;
+    }
+}
