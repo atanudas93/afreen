@@ -2,6 +2,7 @@
 /* BUTTON */
 
 .btn {
+  text-transform: uppercase;
   &:active,
   &.active {
     &:focus,
@@ -59,6 +60,10 @@
   &:hover {
     color: darken($color-text, 5%);
   }
+}
+
+.btn-secondary {
+  @include base-button-variant($white, $color-heading, $color-heading);
 }
 
 

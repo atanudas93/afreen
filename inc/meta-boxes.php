@@ -12,8 +12,8 @@ $prefix ='helpwp_';
      */
     $cmb = new_cmb2_box( array(
         'id'            => 'test_metabox',
-        'title'         => __( 'Test Metabox', 'cmb2' ),
-        'object_types'  => array( 'home-videos', ), // Post type
+        'title'         => __( 'Custom MB', 'cmb2' ),
+        'object_types'  => array( 'home-videos',), // Post type
         'context'       => 'normal',
         'priority'      => 'high',
         'show_names'    => true, // Show field names on the left
@@ -33,6 +33,24 @@ $prefix ='helpwp_';
         // 'on_front'        => false, // Optionally designate a field to wp-admin only
         // 'repeatable'      => true,
     ) );
+      $cmb = new_cmb2_box( array(
+        'id'            => 'test_metabox',
+        'title'         => __( 'Custom MB', 'cmb2' ),
+        'object_types'  => array('contact', ), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, 
+            ) );
+     // Email text field
+    $cmb->add_field( array(
+        'name' => __( 'Email address', 'cmb2' ),
+        'desc' => __( 'Enter email address', 'cmb2' ),
+        'id'   => $prefix . 'url',
+        'type' => 'text_email',
+        'show_on_cb' => 'cmb2_hide_if_no_cats',
+
+    ) );
+
 
     // // URL text field
     // $cmb->add_field( array(

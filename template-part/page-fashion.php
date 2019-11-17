@@ -1,5 +1,4 @@
 <?php
-
 /*Template Name: page-fashion*/
 get_header();
 

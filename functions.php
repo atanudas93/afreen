@@ -49,28 +49,30 @@ function youtube_id($url){
 
 
 //CSS-JS function
-require get_template_directory() .' /inc/css-js.php';
+require_once(dirname(__FILE__) . '/inc/css-js.php');
+
+
 
 //Menu funciton
-require get_template_directory() .' /inc/afreen-menu.php';
+require_once(dirname(__FILE__) . '/inc/afreen-menu.php');
 
 
 //navwalker for menu
-require get_template_directory() .'/inc/wp_bootstrap_navwalker.php';
+require_once(dirname(__FILE__) . '/inc/wp_bootstrap_navwalker.php');
 
 
 
 //Custom post type for Homeslider
-require get_template_directory() .' /inc/production.php';
+require_once(dirname(__FILE__) .'/inc/production.php');
 
 //Custom post type for video
-require get_template_directory() .' /inc/videoslider.php';
+require_once(dirname(__FILE__) .'/inc/videoslider.php');
 
 
 
 //Redux framework 
-require get_template_directory() .' /inc/redux-framework.php';
-require get_template_directory() .' /inc/afreen_theme_options.php';
+require_once(dirname(__FILE__) .'/inc/redux-framework.php');
+require_once(dirname(__FILE__) .'/inc/afreen_theme_options.php');
 
 add_theme_support ('post-content');
 add_theme_support('custom-fields');
@@ -88,9 +90,11 @@ function cut_limit($string, $words = 1) {
 
 //Custom Ajax
 
-include_once(dirname(__FILE__) .' /inc/ajax.php');
+include_once(dirname(__FILE__) .'/inc/ajax.php');
 require_once(dirname(__FILE__) . '/inc/custom_action.php');
 require_once(dirname(__FILE__) . '/inc/meta-boxes.php');
 
+// Contact form custom post 
+require_once(dirname(__FILE__) .'/inc/contact.php');
 
 

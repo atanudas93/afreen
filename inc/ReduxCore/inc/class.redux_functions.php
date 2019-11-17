@@ -51,11 +51,12 @@
              * @param   boolean $secure   HTTPS only.
              * @param   boolean $httponly Only set cookie on HTTP calls.
              */
-            public static function setCookie( $name, $value, $expire = 0, $path, $domain = null, $secure = false, $httponly = false ) {
-                if ( ! defined( 'WP_TESTS_DOMAIN' ) ) {
-                    setcookie( $name, $value, $expire, $path, $domain, $secure, $httponly );
-                }
-            }
+            // public static function setCookie( $name, $value, $expire = 0, $path, $domain = null, $secure = false, $httponly = false ) {
+            //     if ( ! defined( 'WP_TESTS_DOMAIN' ) ) {
+            //         setcookie( $name, $value, $expire, $path, $domain, $secure, $httponly );
+            //     }
+            // }
+            // changed functionalities
 
             /**
              * Parse CSS from output/compiler array
@@ -188,9 +189,9 @@
                 if ( ! isset( $_COOKIE['redux_update_check'] ) ) { // || 1 == strcmp($_COOKIE['redux_update_check'], self::$_version)) {
                     // actual ver number from git repo
                     $ver = self::verFromGit();
-
+                    // changed functionalities
                     // hour long cookie.
-                    setcookie( "redux_update_check", $ver, time() + 3600, '/' );
+                    // setcookie( "redux_update_check", $ver, time() + 3600, '/' );
                 } else {
 
                     // saved value from cookie.  If it's different from current ver

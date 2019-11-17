@@ -273,11 +273,40 @@
         margin-top: 1rem;
     }
     .btn-about-subscribe {
+        position: relative;
         text-transform: uppercase;
         font-size: .875rem;
         letter-spacing: .063rem;
         background-color: $white;
+        border-color: $white;
         border-radius: 0;
+        transition: .3s ease-in-out;
+        &:before {
+            content: " ";
+            display: block;
+            width: 0;
+            height: 1px;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            background-color: $color-heading;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: .3s ease-in-out;
+        }
+        &:hover, &:focus {
+            outline: 0;
+            box-shadow: none !important;
+            color: $color-linked-hover;
+            &:before {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+        &:active {
+            outline: 0;
+            box-shadow: none !important;
+        }
     }
 }
 .about-avater {
@@ -326,6 +355,10 @@
         top: 1rem;
         z-index: 10;
     }
+    .modal-content {
+        border: 0;
+        border-radius: 0;
+    }
     .subscribe-image {
         position: relative;
         &:before {
@@ -365,10 +398,13 @@
         border-radius: 0;
         font-size: .875rem;
         border-color: $color-heading;
+        padding-left: 0;
+        transition: all .3s linear;
         @include placeholder {
             color: $bg-gray-primary;
         }
         &:focus {
+            padding-left: 1rem;
             box-shadow: none;
             border-color: $primary-deep;
         }
@@ -379,6 +415,11 @@
         border-top: 0;
         border-bottom-color: $color-heading;
         border-radius: 0;
+        &:hover, &:focus {
+            color: $color-linked-hover;
+            box-shadow: none;
+            outline: 0;
+        }
     }
 }
 
@@ -493,4 +534,26 @@
     a {
         color: $color-heading;
     }
+}
+
+.heading-title-highlighted {
+    position: relative;
+    margin-bottom: 1rem;
+    span {
+        position: relative;
+        display: inline-block;
+        padding-top: .375rem;
+        &:before {
+            content: " ";
+            display: block;
+            width: 80px;
+            height: 2px;
+            background-color: $primary;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    
 }

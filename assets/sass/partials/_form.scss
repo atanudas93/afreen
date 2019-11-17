@@ -1,0 +1,18 @@
+.form-control {
+	height: calc(1.5em + 1rem + 2px);
+	padding: .5rem 1rem;
+	border-color: $border-color;
+	&:focus {
+		border-color: $primary;
+		box-shadow: 0 0 0 0.2rem rgba($primary,.25);
+	}
+}
+.custom-select {
+	height: calc(1.5em + 1rem + 2px);
+    padding: .5rem 2rem .5rem 1rem;
+    border-color: $border-color;
+    &:focus {
+		border-color: $primary;
+		box-shadow: 0 0 0 0.2rem rgba($primary,.25);
+	}
+}

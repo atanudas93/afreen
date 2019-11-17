@@ -1,3 +1,5 @@
+   
+<?php global $afreen;?>
    <div class="modal fade modal-subscribe" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -7,6 +9,7 @@
             <div class="row no-gutters">
                 <div class="col-md-5">
                     <div class="subscribe-image">
+                     <img src="<?php echo $afreen['aboutme_img']['url'];?>" alt="Afreen">
                     </div>
                 </div>
 

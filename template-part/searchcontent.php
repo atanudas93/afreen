@@ -11,7 +11,7 @@
                             </h4>
                             <div class="blog_default-text">
                                 <p>
-                                   <?php the_content(); ?>
+                                   <?php the_excerpt(); ?>
                                 </p>
                                 <a href="<?php echo get_the_permalink(); ?>" class="go-more">Read more</a>
                             </div>
