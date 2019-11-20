@@ -1,7 +1,7 @@
 <?php
 add_action('init', 'contact_meta_function');
 add_filter('manage_contact_posts_columns','afreen_set_contact_columns');
-add_action('manage_contact_custom_columns','afreen_contact_custom_column');
+add_action('manage_contact_posts_custom_column','afreen_contact_custom_column',10,2);
 
 
 function contact_meta_function() {
@@ -41,10 +41,9 @@ function contact_meta_function() {
 
 function afreen_set_contact_columns( $columns ){
           
-        $title = $columns['title'];
-        $date = $columns['date'];
-        $author = $columns['author'];
-        unset($columns['title'], $columns['date']);
+        // $title = $columns['title'];
+        // $date = $columns['date'];
+        unset($columns['title'], $columns['date'], $columns['message']);
 
           $columns['title'] = 'Full Name';
           $columns['email'] = 'Email';
@@ -54,3 +53,22 @@ function afreen_set_contact_columns( $columns ){
             return $columns;
 
 } 
+
+function afreen_contact_custom_column( $column, $post_id ){
+
+      switch($column){
+        case 'message':
+        echo get_the_excerpt();
+        break;
+
+        case 'email' :
+        $email = get_post_meta($post_id ,'contact_email', true);
+        echo $email;
+        break;
+
+
+
+
+      }
+
+}
