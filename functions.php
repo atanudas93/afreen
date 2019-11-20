@@ -97,6 +97,17 @@ require_once(dirname(__FILE__) . '/inc/contact_us.php');
 // Contact form custom post 
 require_once(dirname(__FILE__) .'/inc/contact.php');
 
+
+
+
+
+
+
+
+
+
+
+//WP insert function for adding form data into dashboard 
 // if(isset($_POST['sub'])){
 
 
