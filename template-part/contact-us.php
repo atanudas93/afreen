@@ -73,12 +73,12 @@ get_header();
     jQuery(document).ready(function($) {
     $('#cm_form').on('submit', function(e) {
             e.preventDefault();
-            // var email = $('#c_email').val();
-            // var msg = $('#c_msg').val();
-            // var name = $('#c_name').val();
-            // if( email === "" || name === "" || msg === ""){
-            //     return false;
-            // }
+            var email = $('#c_email').val();
+            var msg = $('#c_msg').val();
+            var name = $('#c_name').val();
+            if( email === "" || name === "" || msg === ""){
+                return false;  
+            }
             
    var $form = $(this);
      $.post($form.attr('action'), $form.serialize(),

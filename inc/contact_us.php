@@ -29,9 +29,9 @@ function contact_function() {
             );
             $postID = wp_insert_post( $postarr); 
             if($postID){
-                update_post_meta($postID,'contact_email_add', $email);
+                update_post_meta($postID,'contact_email', $email);
                 update_post_meta($postID,'contact_name', $name);
-                $response['msg'] = "<li>Success!!</li>";
+                $response['msg'] = "<li>Successfuly submitted!!</li>";
             }
 
         }else{
