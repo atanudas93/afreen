@@ -63,7 +63,7 @@ function afreen_contact_custom_column( $column, $post_id ){
 
         case 'email' :
         $email = get_post_meta($post_id ,'contact_email', true);
-        echo $email;
+        echo '<a href="mailto:' .$email.'">'.$email.'</a>';
         break;
 
 
