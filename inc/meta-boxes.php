@@ -34,7 +34,7 @@ $prefix ='helpwp_';
         // 'repeatable'      => true,
     ) );
       $cmb = new_cmb2_box( array(
-        'id'            => 'test_metabox',
+        'id'            => 'newe_metabox',
         'title'         => __( 'Custom MB', 'cmb2' ),
         'object_types'  => array('contact', ), // Post type
         'context'       => 'normal',
@@ -44,7 +44,7 @@ $prefix ='helpwp_';
      // Email text field
     $cmb->add_field( array(
         'name' => __( 'Email address', 'cmb2' ),
-        'desc' => __( 'Enter email address', 'cmb2' ),
+        'desc' => __( 'Captured email address', 'cmb2' ),
         'id'   => $prefix . 'url',
         'type' => 'text_email',
         'show_on_cb' => 'cmb2_hide_if_no_cats',

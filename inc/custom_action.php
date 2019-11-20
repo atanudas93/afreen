@@ -27,4 +27,3 @@ function custom_action() {
 }
 add_action( 'wp_ajax_custom_action', 'custom_action' );
 add_action( 'wp_ajax_nopriv_custom_action', 'custom_action' );
-?>

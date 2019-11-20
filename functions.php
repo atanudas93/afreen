@@ -93,8 +93,27 @@ function cut_limit($string, $words = 1) {
 include_once(dirname(__FILE__) .'/inc/ajax.php');
 require_once(dirname(__FILE__) . '/inc/custom_action.php');
 require_once(dirname(__FILE__) . '/inc/meta-boxes.php');
-
+require_once(dirname(__FILE__) . '/inc/contact_us.php');
 // Contact form custom post 
 require_once(dirname(__FILE__) .'/inc/contact.php');
 
+// if(isset($_POST['sub'])){
 
+
+// $name = $_POST['name'];
+
+// $message = $_POST['message'];
+
+// $arg = array(
+
+//     'post_type' => 'contact',
+//     'post_title' => $name,
+//     'post_content' => $message,
+//     'post_status' => 'publish' 
+
+// );
+
+// wp_insert_post($arg);
+
+
+// }

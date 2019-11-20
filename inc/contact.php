@@ -24,12 +24,12 @@ function contact_meta_function() {
        'show_ui' => true,
        'show_in_menu' => true,
        'query_var' => true,
-       'rewrite' => array('slug' => 'harmony-contact_meta'),
+       'rewrite' => array('slug' => 'afreen-contact_meta'),
        'capability_type' => 'post',
        'has_archive' => true,
        'hierarchical' => false,
        'menu_position' => null,
-       'supports' => array('title', 'editor'),
+       'supports' => array('title', 'editor','author'),
        'menu_icon' => 'dashicons-admin-users'
    );
    register_post_type('contact', $args);
