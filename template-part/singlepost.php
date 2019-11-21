@@ -1,49 +1,38 @@
-
- <!-- This dov section taken from single blog post -->
- <div class="card-blog_default">
-    
-
 <section class="block-pb">
         <div class="container">
             <div class="text-widget">
-                <div class="card-blog_default">
-           
-               
+                
+                 <?php
+                   $url = esc_url( get_post_meta( get_the_ID(), 'video_embed', 1 ) );
 
-                        <div class="blog_default-image">
-                            <?php
-                                                $url = get_post_meta(get_the_ID(), 'helpwp_url', true);
-                                                $yt_id = youtube_id($url);
+                   if($url != ''):?>
 
-                                            if($url != ''):?>                                               
-                                                <a href= "<?php echo get_the_permalink(); ?>"> 
+                   <a href= "<?php echo get_the_permalink(); ?>"class="go-more"> 
 
-                                                    <img src="https://img.youtube.com/vi/<?php echo esc_html($yt_id)?>/maxresdefault.jpg" >      
+    
+                    <div class="embed-responsive embed-responsive-16by9">
+                                            
+                         <a href= "<?php echo get_the_permalink(); ?>"class="go-more"> 
 
+                                                      <?php echo wp_oembed_get( $url ); ?>
 
-                                                </a>
-                                                <?php else:  ?> 
+                         </a>
 
-                                              <a href="<?php echo get_the_permalink(); ?>" class="go-more">
-                                    <?php the_post_thumbnail()?> 
+                    </div>
 
-                                    </a>
-                                                <?php endif;  ?>
+                     <?php else:  ?> 
 
+                <figure>
+                    <img class="img-fluid" src="<?php the_post_thumbnail()?>">
+                     
+                </figure>
 
-
-
-                                
-                            </div>
-
-           
-            
-
+                <?php endif;  ?>
 
                 <h1 class="single-heading"><?php echo get_the_title();?></h1>
                 <p class="post-date"><?php echo get_the_date('d/m/Y'); ?></p>
                 <p>
-                  <?php the_content();?>
+                   <?php the_content();?>
                 </p>
             </div>
             <div class="single-post-metas">
@@ -66,8 +55,6 @@
                 </ul>
             </div>
         </div>
-       </div>  
     </section>
-
-    </div>
+    
 

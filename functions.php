@@ -97,6 +97,12 @@ require_once(dirname(__FILE__) . '/inc/contact_us.php');
 // Contact form custom post 
 require_once(dirname(__FILE__) .'/inc/contact.php');
 
+function crunchify_embed_defaults($embed_size){
+	$embed_size['width'] = 1110;
+	$embed_size['height'] = 624.38;
+	return $embed_size;
+}
+add_filter('embed_defaults', 'crunchify_embed_defaults');
 
 
 
