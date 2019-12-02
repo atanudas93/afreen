@@ -6,10 +6,10 @@
 
                                     <?php
                                 $blog = new WP_Query(array('post_type' => 'home-videos', 'posts_per_page' => 10, 'order' => 'desc'));
-
                                 if ($blog->have_posts()) :
                                 while ($blog->have_posts()) :
                                 $blog->the_post();
+
                                 ?>
 
                         <div class="slide-item">

@@ -14,7 +14,7 @@
                             <div class="blog_default-text">
                                 <p>
                                   
-                                   <?php the_excerpt(); ?>
+                                   <?php echo wp_trim_words( get_the_content(), 10 ); ?>
                             
                                 </p>
                                 <a href="<?php echo get_the_permalink(); ?>" class="go-more">Read more</a>

@@ -1,6 +1,20 @@
-
+<div class="col-md-3">
+                    <a href="<?php echo get_the_permalink(); ?>" class="related-item">
   
-            <div class="col-md-3">
+
+
+                        <div class="related-image">
+
+                            <img src="<?php the_post_thumbnail()?>" alt="">
+                        </div>
+
+                        <div class="related-content">
+                            <h5 class="related-title"><?php echo get_the_title(); ?></h5>
+                        </div>
+                    </a>
+                </div>
+  
+       <!--      <div class="col-md-3">
                 <a href="<?php echo get_the_permalink(); ?> " class="related-item">
                      <div class="related-image">
                       
@@ -15,6 +29,8 @@
 
 
                                                 </a>
+
+
                                                 <?php else:  ?> 
 
                                                 <img src="<?php the_post_thumbnail()?>" > 
@@ -29,5 +45,5 @@
                 
                 
             </div>
-       
+        -->
   
